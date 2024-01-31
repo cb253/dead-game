@@ -2,28 +2,29 @@ import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterOutlet } from '@angular/router';
 import { HomeComponent } from './home/home.component';
-import { HousingLocationComponent } from './housing-location/housing-location.component';
+import { GameCardsComponent } from './game-cards/game-cards.component';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [HomeComponent,CommonModule, HousingLocationComponent],
+  imports: [HomeComponent,CommonModule, GameCardsComponent],
   styleUrl: './app.component.css',
   template: `
   <main>
     <header>
-    <img src="./assets/l"/>
-    <h1>DeadGame</h1>
+    <h3>Welcome to</h3>
+    <h1>DEAD GAME</h1>
+    <p>Find data on all your favorite dying games!</p>
+    <form target="_top">
+      <input type="text" id="gameName" name="gameName" placeholder="Enter game name">
+      <button type="button">Search</button>
+
+    </form>
+
     <app-home></app-home>
     </header>
-    <section>
-      <form>
-        <input type="text" placeholder="Enter game name">
-        <button class="primary" type="button">Search</button>
-      </form>
-    </section>
     <section class="results">
-      <app-housing-location></app-housing-location>
+      <game-cards></game-cards>
     </section>
   </main>
   `

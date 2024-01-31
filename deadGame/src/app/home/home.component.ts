@@ -5,9 +5,7 @@ import { Component } from '@angular/core';
   standalone: true,
   imports: [],
   template: `
-    <p>
-      Welcome to DeadGame!
-    </p>
+
   `,
   styleUrl: './home.component.css'
 })
